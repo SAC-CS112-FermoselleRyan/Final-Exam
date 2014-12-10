@@ -1,0 +1,21 @@
+
+public class Roller implements Runnable {
+//The following arrays are encapsulated because they are made private until they are override.
+	private final Array sharedArray;
+	private final int startValue;
+
+	public Roller( int value, Array array )
+	{
+		startValue = value;
+		sharedArray = array;
+		} 
+	
+	public void run()
+	{
+		for ( int i = startValue; i < startValue + 3; i++ )
+		{
+			sharedArray.add( i ); 
+
+		}
+	}
+}
