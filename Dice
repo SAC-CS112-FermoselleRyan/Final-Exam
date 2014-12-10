@@ -1,0 +1,25 @@
+import java.util.*;
+
+
+
+public class Dice {
+
+    static Random random = new Random();
+    public Dice(int i, int j){
+
+ }
+
+public static int roll(){
+  return random.nextInt(6)+1;
+ }
+
+public static int Roller() {
+	return 0;
+}
+
+public void Throw() {
+	// TODO Auto-generated method stub
+	
+}
+	
+}
