@@ -1,0 +1,40 @@
+
+public class DoubleDiceTest {
+
+	 public static void main(String[] args, Dice doubleDiceHistoryTwo) 
+	 {
+	  Dice first = new Dice(5,1);
+	  first.Throw();
+	  System.out.println(first); //implicitly calls first.toString();
+	  
+	  System.out.println();
+	  
+	  DoubleDice doubleDice = new DoubleDice(1);
+	  doubleDice.Throw();
+	  System.out.println(doubleDice); //implicitly calls doubleDice.toString();
+	  
+	  System.out.println();
+	  
+	  DoubleDiceWithHistory doubleDiceHistory = new DoubleDiceWithHistory(1);
+	  doubleDiceHistory.Throw();
+	  doubleDiceHistory.Throw();
+	  doubleDiceHistory.Throw();
+	  System.out.println(doubleDiceHistory); //implicitly calls doubleDiceHistory.toString();
+	  
+	  DoubleDiceWithHistory threeDiceHistoryTwo = new DoubleDiceWithHistory(1);
+	  doubleDiceHistoryTwo.Throw();
+	  doubleDiceHistoryTwo.Throw();
+	  doubleDiceHistoryTwo.Throw();
+	  System.out.println(threeDiceHistoryTwo);
+	  
+	  if(DoubleDiceWithHistory.equals(doubleDiceHistory))
+	  {
+		  System.out.println("The two DoubleDiceWithHistory have equal values.");
+	  }
+	  
+	  System.exit(0);
+	  
+	 
+	 }
+	
+}
