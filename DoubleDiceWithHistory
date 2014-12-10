@@ -1,0 +1,54 @@
+
+public class DoubleDiceWithHistory {
+//Class helps test class.
+	 int [] myArray;
+	 int numThrows;
+	 public DoubleDiceWithHistory(int bounces)
+	 {
+	  super();
+	  //set of arrays
+	  myArray = new int[10];
+	  for(int i = 0; i<10; i++)
+	   myArray[i] = 0;
+	  numThrows = 0;
+	 }
+	 
+	 public int Throw()
+	 {
+	  int value = super.Throw();
+	  myArray[numThrows] = value;
+	  numThrows++;
+	  return value;
+	 }
+	 //@Overide is used to represent the static polymorphism
+	 @Override
+	 public String toString()
+	 {
+	  String history = new String();
+	  for(int i = 0; i<numThrows; i++)
+	  {
+	   history += "Throw " + (i+1) + ": " + myArray[i] + "\n";
+	  }
+	  
+	  return super.toString() + "\n" + history; 
+	  
+	 }
+	 
+	 public boolean equals(Object obj, Object value) 
+	 {
+	     if (obj instanceof DoubleDiceWithHistory)
+	         return (value== ((DoubleDiceWithHistory)obj).Value()) ; 
+	     else
+	         return false;
+	 }
+	 
+	 private Object Value() {
+		return null;
+	}
+	//@Overide is used to represent the static polymorphism
+	@Override
+	 public Object clone() throws CloneNotSupportedException
+	 {
+		 return (DoubleDiceWithHistory) super.clone();
+	 }
+}
