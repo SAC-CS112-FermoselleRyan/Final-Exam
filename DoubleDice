@@ -1,0 +1,30 @@
+import java.util.*;
+//DoubleDice class is using multi-threading via implemented Runnable.
+public abstract class DoubleDice implements Runnable {
+	
+
+    static Random random = new Random();
+    public DoubleDice(){
+    
+ 
+    }	
+    public static int roll(){
+    	  return random.nextInt(12)+1;
+    	 }
+
+    	public static int Roller() {
+    		return 0;
+    	}
+    	public void run(int startValue, Object sharedArray) {
+			
+			for ( int i = startValue; i < startValue + 1; i++ )
+			{
+
+			}
+			
+		}
+		public void Throw() {
+			
+		}
+    	
+		}
